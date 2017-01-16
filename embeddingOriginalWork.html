@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	    <title>HELLO WORLD</title>
+    </head>
+    <body>
+        <h1>HELLO WORLD</h1>
+        <iframe width="640" height="360" src="https://www.youtube.com/embed/vO_dO3mMboQ" frameborder="0" allowfullscreen></iframe>
+        <iframe width="640" height="360" src="https://www.youtube.com/embed/C3HDxd4Z-u8?list=PLFyAi50tSG9hF4-p3YMVHCumEZNCucCJS&autoplay=1" frameborder="0" allowfullscreen></iframe>
+        <style>
+      #map {
+        height: 400px;
+        width: 100%;
+       }
+    </style>
+  </head>
+  <body>
+    <h3>My Google Maps</h3>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var uluru = {lat: -25.363, lng: 131.044};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+    </script>
+    </body>
+</html>
